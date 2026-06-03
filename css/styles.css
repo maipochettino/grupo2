@@ -10,12 +10,20 @@ header{
     background-color: hsl(224, 74%, 83%);
     text-align: center;
     padding: 20px;
+    position:relative; /*para que el boton oscuro se alinee respecto al header*/
 }
 header section{
     font-family: "BrightKenly";
     font-size: 2rem;
     letter-spacing: 5px;
 }
+main, #inicio{
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+main h2:first-child, #inicio h2:first-child{
 .secDeNoticias{
     display: grid;
     grid-template-rows: 20% repeat(2, 1fr);
@@ -49,6 +57,17 @@ article{
     border: solid 1px;
     border-color: lightgrey;
 }
+#modoOscuro {
+    position: absolute;
+    top: 20px;       /* Distancia desde arriba */
+    right: 20px;     /* Distancia desde la derecha */
+    background-color: #374151;  /* para que se vea distinto a los otros botones*/
+    font-size: 0.9rem;
+    padding: 8px 15px;
+}
+main,#inicio,#resena,footer{
+    margin: 30px; /*que no se choque el contenido contra los limites*/
+} 
 @font-face {
     font-family: "BrightKenly";
     src: url("../assets/BrightKenly.ttf") format("opentype");
