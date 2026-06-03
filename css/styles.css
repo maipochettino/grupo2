@@ -31,7 +31,6 @@ article{
     display: inline-block;
     justify-items: center;
 }
-
 .dark{
     background-color: #272725;
     color: aliceblue;
@@ -40,6 +39,7 @@ article{
     background-color:  lch(54.85% 48.47 286.06) ;
     color: lightgray;
 }
+
 .dark article{
     background-color: #272725;
     border: solid 1px;
@@ -61,4 +61,68 @@ button{
 img{
     max-height: 100%;
     max-width: 100%;
+}
+.completo{
+    display: none;
+    padding: 10px;
+    text-align: justify;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+.leerMas{
+    text-decoration: none;
+    border: solid 1px black;
+    padding: 5px 10px;
+    color: black;
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+.leerMas:hover{
+    background-color: lightgray;
+}
+/* Sobreescribimos el Grid del main para la página de la noticia */
+main.paginaNoticia {
+    display: block; /* Cambiamos de grid a bloque normal */
+    max-width: 800px; /* Un ancho óptimo para lectura */
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Estructura limpia para el contenido */
+.paginaNoticia h2 {
+    font-family: "BrightKenly", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Contenedor opcional para la imagen y el texto principal */
+.noticia-cabecera {
+    display: flex;
+    gap: 30px;
+    align-items: start;
+    margin-bottom: 30px;
+}
+
+.noticia-cabecera img {
+    width: 40%; /* La imagen ocupa una parte */
+    max-height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.noticia-cabecera .extracto {
+    width: 60%;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* El resto del texto que va abajo a ancho completo */
+.noticia-cuerpo {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    clear: both;
 }

@@ -17,3 +17,25 @@ btnbuscar.addEventListener("click", function(){
         }
     });
 });
+
+const botonesLeer =
+document.querySelectorAll(".leerMas");
+botonesLeer.forEach(function(boton){
+    boton.addEventListener("click", function(){
+        const noticia =
+        boton.parentElement;
+        const textoCompleto =
+        noticia.querySelector(".completo");
+        if(textoCompleto.style.display === "block"){
+            textoCompleto.style.display = "none";
+            boton.textContent =
+            "Leer más";
+        }
+        else{
+            textoCompleto.style.display =
+            "block";
+            boton.textContent =
+            "Leer menos";
+        }
+    });
+});
