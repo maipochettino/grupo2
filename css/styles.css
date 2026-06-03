@@ -10,6 +10,7 @@ header{
     background-color: hsl(224, 74%, 83%);
     text-align: center;
     padding: 20px;
+    position:relative; /*para que el boton oscuro se alinee respecto al header*/
 }
 header section{
     font-family: "BrightKenly";
@@ -45,3 +46,14 @@ article{
     border: solid 1px;
     border-color: lightgrey;
 }
+#modoOscuro {
+    position: absolute;
+    top: 20px;       /* Distancia desde arriba */
+    right: 20px;     /* Distancia desde la derecha */
+    background-color: #374151;  /* para que se vea distinto a los otros botones*/
+    font-size: 0.9rem;
+    padding: 8px 15px;
+}
+main,#inicio,#resena,footer{
+    margin: 30px; /*que no se choque el contenido contra los limites*/
+} 
