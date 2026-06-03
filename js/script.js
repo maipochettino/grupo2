@@ -7,9 +7,9 @@ const NOTICIAS_INICIALES = [
     },
     {
         id: 2,
-        titulo: "Taylor Swift rompe récord en Spotify",
-        descripcion: "La artista superó los 100 millones de oyentes mensuales con su último álbum.",
-        imagen: "https://placehold.co/400x200?text=Taylor+Swift"
+        titulo: "Dua Lipa se casó y el mundo enloquece",
+        descripcion: "La cantante confirmó su casamiento en una ceremonia privada que explotó en redes sociales.",
+        imagen: "https://placehold.co/400x200?text=Dua+Lipa"
     },
     {
         id: 3,
