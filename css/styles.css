@@ -17,10 +17,6 @@ header section {
     font-size: 2rem;
     letter-spacing: 5px;
 }
-.secDeNoticias h2 {
-    grid-column: 1 / 4;
-    padding-bottom: 2%;
-}
 #resena, footer, .secDeNoticias {
     margin: 40px 30px;
 }
@@ -102,8 +98,5 @@ footer {
 @media (max-width: 768px) {
     main, #inicio, .secDeNoticias {
         grid-template-columns: 1fr;
-    }
-    main h2:first-child, #inicio h2:first-child, .secDeNoticias h2 {
-        grid-column: 1;
     }
 }
