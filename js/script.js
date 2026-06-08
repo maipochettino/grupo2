@@ -1,41 +1,4 @@
-const NOTICIAS_INICIALES = [
-    {
-        id: 1,
-        titulo: "Romeo Beckham lanza su marca de ropa deportiva INTRA",
-        descripcion: "El hijo de David Beckham debuta en el mundo de la moda con una línea deportiva que ya genera polémica por su estética hooligan.",
-        imagen: "assets/1.jpeg"
-    },
-    {
-        id: 2,
-        titulo: "¿Qué países gastan más en artículos de lujo?",
-        descripcion: "Un nuevo ranking revela cuáles son las naciones que más invierten en moda y accesorios de alta gama a nivel mundial.",
-        imagen: "assets/2.jpeg"
-    },
-    {
-        id: 3,
-        titulo: "Messi x Kith: la colección con Adidas que une fútbol y moda",
-        descripcion: "Ronnie Fieg y Lionel Messi se unen para lanzar una colección exclusiva de ropa y zapatillas para Adidas Football.",
-        imagen: "assets/3.jpeg"
-    },
-    {
-        id: 4,
-        titulo: "Las marcas internacionales que llegan a Argentina en 2026",
-        descripcion: "Sandro, Mango y otras firmas globales planifican abrir locales en el país. El mapa completo de aperturas previstas.",
-        imagen: "assets/4.jpeg"
-    },
-    {
-        id: 5,
-        titulo: "Crisis textil: la producción cayó más de 30% desde 2023",
-        descripcion: "El sector sigue hundiéndose. Los números muestran una caída sostenida que preocupa a fabricantes y trabajadores del rubro.",
-        imagen: "assets/5.jpeg"
-    },
-    {
-        id: 6,
-        titulo: "Chrome Hearts: la marca que se hizo imposible de conseguir",
-        descripcion: "Sin publicidad, sin e-commerce y con listas de espera eternas. Así se convirtió Chrome Hearts en el objeto de deseo más exclusivo del momento.",
-        imagen: "assets/6.jpeg"
-    }
-];
+const NOTICIAS_INICIALES = [];
 
 function cargarNoticiasIniciales() {
     if (!localStorage.getItem("noticias")) {
@@ -46,11 +9,7 @@ function cargarNoticiasIniciales() {
 function renderizarNoticias() {
     const contenedor = document.getElementById("noticias-home");
     if (!contenedor) return;
-
     const datos = JSON.parse(localStorage.getItem("noticias")) || [];
-
-    contenedor.innerHTML = "<h2>Últimas noticias</h2>";
-
     if (datos.length === 0) {
         contenedor.innerHTML += "<p>No hay noticias publicadas todavía.</p>";
         return;
@@ -73,7 +32,7 @@ function renderizarNoticias() {
 }
 
 function iniciarModoOscuro() {
-    const boton = document.getElementById("modoOscuro");
+    const boton = document.getElementById("boton-dark-mode");
     if (!boton) return;
 
     if (localStorage.getItem("darkMode") === "activado") {
@@ -150,8 +109,8 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.removeItem("adminToken");
     }
 
-    cargarNoticiasIniciales();
-    renderizarNoticias();
+    /*cargarNoticiasIniciales();
+    renderizarNoticias();*/
     iniciarModoOscuro();
     cargarCotizacionDolar();
     iniciarBuscador();
