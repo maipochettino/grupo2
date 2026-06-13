@@ -85,7 +85,7 @@ function mostrarNoticias() {
     noticias.forEach((noticia, indice) => {
 
         tabla.innerHTML += `
-            <div class="noticia-admin">
+            <article class="noticia-admin">
 
                 <img
                     src="${noticia.imagen}"
@@ -107,7 +107,7 @@ function mostrarNoticias() {
 
                 <hr>
 
-            </div>
+            </article>
         `;
     });
 }
