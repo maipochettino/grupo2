@@ -63,7 +63,10 @@ btnGuardar.addEventListener("click", function () {
     const noticia = {
         titulo,
         descripcion,
-        imagen
+        imagen,
+        categoria,
+        destacada,
+        link,
     };
 
     const id =

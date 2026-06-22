@@ -4,7 +4,7 @@
 }
 .secDeNoticias {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0,fr));
     gap: 20px;
 }
 .secDeNoticias h2 {
@@ -41,6 +41,9 @@ article {
     justify-content: space-between;
     align-items: center;
     min-width: 0;
+
+    width: 100%;
+    box-sizing: border-box;
 }
 article:hover button,
 article:hover a {
